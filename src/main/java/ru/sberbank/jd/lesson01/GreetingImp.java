@@ -16,21 +16,45 @@ import java.util.Set;
 public class GreetingImp implements Greeting {
 
     /**
-     * Объявляем переменные.
+     * Объявляем переменную имени.
      */
-
     private final String firstName;
+
+    /**
+     * Объявляем переменную фамилии.
+     */
     private final  String lastName;
+
+    /**
+     * Объявляем переменную даты рождения.
+     */
     private final int birthYear;
+
+    /**
+     * Объявляем переменную для хобби.
+     */
     private final Set<String> hobbies;
+
+    /**
+     * Объявляем переменную для урла репозитория.
+     */
     private final String repoUrl;
+
+    /**
+     * Объявляем переменную для телефона.
+     */
     private final String phone;
+
+    /**
+     * Объявляем переменную для ожиданий.
+     */
     private final Set<String> courseExpectations;
 
     /**
      * Конструктор класса с параметрами.
      */
 
+    @SuppressWarnings("checkstyle:HiddenField")
     public GreetingImp(String firstName, String lastName, int birthYear,
                        Collection<String> hobbies, String repoUrl,
                        String phone, Collection<String> courseExpectations) {
@@ -40,7 +64,8 @@ public class GreetingImp implements Greeting {
         this.hobbies = Collections.unmodifiableSet(new HashSet<>(hobbies));
         this.repoUrl = repoUrl;
         this.phone = phone;
-        this.courseExpectations = Collections.unmodifiableSet(new HashSet<>(courseExpectations));
+        this.courseExpectations =
+                Collections.unmodifiableSet(new HashSet<>(courseExpectations));
     }
 
     /**
@@ -111,11 +136,12 @@ public class GreetingImp implements Greeting {
         hobbies.add("видеоигры");
         hobbies.add("чтение");
         String repoUrl = "https://github.com/OhShame/ForJava";
-        String phone = "+79999999999"; // У меня публичный репозиторий, так что тут девяточки х)
+        String phone = "+79999999999";
+        // У меня публичный репозиторий, так что тут девяточки х)
         Collection<String> courseExpectations = new ArrayList<>();
         courseExpectations.add("начать что-то понимать");
 
-        GreetingImp annGasanova = new GreetingImp(firstName, lastName, birthYear, hobbies,
-                repoUrl, phone, courseExpectations);
+        GreetingImp annGasanova = new GreetingImp(firstName, lastName,
+                birthYear, hobbies, repoUrl, phone, courseExpectations);
     }
 }
