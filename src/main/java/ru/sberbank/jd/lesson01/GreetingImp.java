@@ -54,7 +54,6 @@ public class GreetingImp implements Greeting {
      * Конструктор класса с параметрами.
      */
 
-    @SuppressWarnings("checkstyle:HiddenField")
     public GreetingImp(String firstName, String lastName, int birthYear,
                        Collection<String> hobbies, String repoUrl,
                        String phone, Collection<String> courseExpectations) {
